@@ -8,3 +8,7 @@ RUN apt update &&\
     make \
     texlive-xetex \
     git
+
+WORKDIR /usr/app
+
+ENTRYPOINT [ "/bin/bash", "-l", "-c" ]
