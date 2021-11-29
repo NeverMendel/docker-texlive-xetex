@@ -28,10 +28,10 @@ You can choose whether you prefer to use the image interactively or not.
 
 ### Interactively
 
-Start an instance of the image interactively
+Start an instance of the image interactively by changing the entry point to `/bin/bash`:
 
 ```
-docker run --entry-point=/bin/bash -v $(pwd):/usr/app --rm nevermendel/docker-texlive-xetex
+docker run -it --entrypoint=/bin/bash -v $(pwd):/usr/app --rm nevermendel/docker-texlive-xetex
 ```
 
 Then run XeLaTex to compile your files by executing `xelatex file.tex`
